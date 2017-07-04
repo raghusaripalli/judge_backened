@@ -1,0 +1,20 @@
+DATETIME 	: [2017-07-04 16:06:44,361] 
+LEVEL 		: DEBUG 
+FUNCTION 	:  django.db.backends.execute:91 
+MESSAGE 	:  (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None 
+
+DATETIME 	: [2017-07-04 16:06:44,361] 
+LEVEL 		: DEBUG 
+FUNCTION 	:  django.db.backends.execute:91 
+MESSAGE 	:  (0.000) SELECT VERSION(); args=None 
+
+DATETIME 	: [2017-07-04 16:06:45,318] 
+LEVEL 		: DEBUG 
+FUNCTION 	:  django.db.backends.execute:91 
+MESSAGE 	:  (0.000) SHOW FULL TABLES; args=None 
+
+DATETIME 	: [2017-07-04 16:06:45,334] 
+LEVEL 		: DEBUG 
+FUNCTION 	:  django.db.backends.execute:91 
+MESSAGE 	:  (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=() 
+
