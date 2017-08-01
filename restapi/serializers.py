@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import *
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,6 +20,7 @@ class NestedUserSerializer(serializers.ModelSerializer):
         return user
 
 class UserSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = User
         fields = ('id', 'username', 'password', 'email', 'first_name', 'last_name')
@@ -39,3 +40,15 @@ class UserSerializer(serializers.ModelSerializer):
         profile = Profile.objects.create(user=user)
         profile.save()
         return user
+
+
+class ContestSerializer(serializers.ModelSerializer):
+    Admin = serializers.PrimaryKeyRelatedField(many=False,read_only=True)
+    class Meta:
+        model = Contest
+        fields = ('id', 'contest_code','name','Admin','starts','ends')
+
+class ProblemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Problem
+        fields = ('id', 'problem_code','problem_name','contest','votes','submissions')

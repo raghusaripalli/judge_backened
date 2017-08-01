@@ -1,5 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+from django.contrib import admin
+
+# Register your models here.
 from django.contrib.auth.models import User,AbstractUser
 # from .models import CustomUser
 # from django.contrib import admin
@@ -10,7 +11,7 @@ from django.contrib.auth.models import User,AbstractUser
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import *
 
 
 class ProfileInline(admin.StackedInline):
@@ -58,3 +59,6 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
+admin.site.register(Contest)
+admin.site.register(Problem)
+admin.site.register(Solutions)

@@ -1,0 +1,18 @@
+           body {
+              display: flex;
+              min-height: 150vh;
+              flex-direction: column;
+            }
+
+            main {
+              flex: 1 0 auto;
+            }
+
+          .wrapper{
+              width: 40%;
+              padding : 20px 5px 20px 5px;
+              max-width: 11000px;
+              margin: 20px auto;
+          }
+
+
